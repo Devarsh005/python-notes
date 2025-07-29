@@ -1,0 +1,104 @@
+# 📘 Python Basics – Data Types & Structures Notes
+
+---
+
+### ❓ 1. What are the built-in data types in Python?
+
+**Categories & Examples:**
+
+- **Text Type**: `str`  
+  → `"Hello"`
+
+- **Numeric Types**: `int`, `float`, `complex`  
+  → `10`, `3.14`, `2 + 3j`
+
+- **Sequence Types**: `list`, `tuple`, `range`  
+  → `[1, 2]`, `(1, 2)`, `range(5)`
+
+- **Mapping Type**: `dict`  
+  → `{"name": "Devarsh"}`
+
+- **Set Types**: `set`, `frozenset`  
+  → `{1, 2}`, `frozenset([1, 2])`
+
+- **Boolean Type**: `bool`  
+  → `True`, `False`
+
+- **Binary Types**: `bytes`, `bytearray`, `memoryview`  
+  → `b"abc"`, `bytearray(b"abc")`
+
+- **None Type**: `NoneType`  
+  → `None`
+
+---
+
+### ❓ 2. Difference between mutable and immutable data types
+
+| Feature            | Mutable                          | Immutable                           |
+|-------------------|----------------------------------|-------------------------------------|
+| Can change?        | ✅ Yes                           | ❌ No                                |
+| Examples           | `list`, `dict`, `set`           | `int`, `str`, `tuple`, `frozenset` |
+
+---
+
+### ❓ 3. Python secrets: Set, Tuple, Dict behavior
+
+- **Set** only allows **immutable elements**.
+- **Tuple** is immutable but can **contain mutable objects**.
+- **Dict keys** must be **unique and immutable**.
+- **Strings are immutable**.
+- Use `id()` to inspect memory identity (changes for immutable on modification).
+- Strings behave like arrays (`s[0]`, slicing).
+- Copying mutable objects creates **shared references** unless `.copy()` is used.
+
+---
+
+### ❓ 4. Difference between Lists and Tuples
+
+| Feature         | List (`[]`)                    | Tuple (`()`)                   |
+|----------------|--------------------------------|--------------------------------|
+| Mutable         | ✅ Yes                         | ❌ No                           |
+| Performance     | Slower                         | Faster                         |
+| Use case        | Dynamic data                  | Fixed, constant data           |
+| Methods         | Many                           | Few                            |
+
+---
+
+### ❓ 5. Characteristics of Sets and Dictionaries
+
+#### ✅ Set:
+- Unordered, mutable, no duplicates
+- Fast membership test
+- Useful for uniqueness, math operations
+
+#### ✅ Dict:
+- Key-value pairs
+- Keys must be unique and hashable
+- Preserves order (Python 3.7+)
+- Ideal for mapping, structured data
+
+---
+
+### ❓ 6. Why learn data types if we use a database?
+
+- Data is **used in Python** (logic, APIs, validations, transformations)
+- You must **cast**, **validate**, and **convert** data
+- Needed in **type hints**, **performance**, and **debugging**
+- Python <--> DB mapping needs type understanding
+
+---
+
+### ❓ 7. How to define and use a string in Python
+
+```python
+# Definitions:
+s1 = 'Hello'
+s2 = "World"
+s3 = '''Multi-line string'''
+
+# Operations:
+s1 + s2                # Concatenation
+s1.upper(), s1.lower() # Case conversion
+s1[0], s1[-1]          # Indexing
+s1[1:3], s1[::-1]      # Slicing
+f"My name is {name}"  # f-strings
