@@ -102,3 +102,38 @@ s1.upper(), s1.lower() # Case conversion
 s1[0], s1[-1]          # Indexing
 s1[1:3], s1[::-1]      # Slicing
 f"My name is {name}"  # f-strings
+
+# 🔄 Type Casting in Python
+
+## ✅ What is Type Casting?
+
+**Type casting** (or **type conversion**) is the process of converting the value of one data type to another.
+
+---
+
+## ✅ Why Do We Use Type Casting?
+
+1. **Data Compatibility**  
+   Convert input data (e.g., from `str`) to numeric types for calculations.
+
+2. **Avoid Errors**  
+   Prevent type mismatch errors (like adding `str` and `int`).
+
+3. **Interfacing with External Systems**  
+   Files, APIs, or DBs may return `str`, which you may need to convert to `int`, `float`, etc.
+
+4. **Explicit Control**  
+   Ensure variables are of the expected type for correct operations.
+
+5. **Memory/Performance Optimization**  
+   Convert float to int to save memory or simplify logic.
+
+---
+
+## 🧪 Examples of Type Casting
+
+### 🔹 String to Integer
+```python
+num_str = "123"
+num_int = int(num_str)
+print(num_int + 10)  # Output: 133
